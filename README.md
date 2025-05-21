@@ -2,14 +2,6 @@
 
 An authentication microservice with user management CRUD operations and JWT authentication, containerized with Docker.
 
-## Features
-
-- User registration and login
-- JWT authentication
-- Password hashing with bcrypt
-- CRUD operations for users
-- Docker containerization
-
 ## API Endpoints
 
 ### Public Routes
@@ -33,12 +25,12 @@ An authentication microservice with user management CRUD operations and JWT auth
 1. Clone the repository
 2. Create a .env file with these variables:
    ```
-   PORT=5000
+   PORT=5000 # or another if this one is in use
    MONGO_URI=mongodb://mongo:27017/auth-service
    JWT_SECRET=your_jwt_secret_here  # replace with your own secret key
    JWT_EXPIRE=30d
    ```
-3. Run `docker compose up` to start the application
+3. Run `docker compose up` to start the app
 
 ## Communication Contract
 
@@ -48,7 +40,7 @@ To use this microservice, you'll need to make HTTP requests to the desired endpo
 
 #### Base URL
 
-If running locally, the base URL is: `http://localhost:5000/api`
+If running locally, the base URL should be: `http://localhost:5000/api`
 
 #### Authentication
 
@@ -264,10 +256,3 @@ if (data.success) {
 ## UML Sequence Diagram
 
 <img src="./UML.jpeg" alt="Authentication Service UML Diagram" width="60%">
-
-## Environment Variables
-
-- `PORT` - Server port (default: 5000)
-- `MONGO_URI` - MongoDB connection string
-- `JWT_SECRET` - Secret key for JWT
-- `JWT_EXPIRE` - JWT expiration time
