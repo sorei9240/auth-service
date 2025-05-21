@@ -207,9 +207,9 @@ The microservice responds with JSON data. All responses follow this format:
 ```json
 {
   "success": true|false,
-  "token": "JWT_TOKEN",  // for register and login endpoints
-  "data": {},            // requested data 
-  "error": "Error message" // present if success is false
+  "token": "JWT_TOKEN",  
+  "data": {},           
+  "error": "Error message" 
 }
 ```
 
@@ -263,7 +263,7 @@ if (data.success) {
 
 ## UML Sequence Diagram
 
-
+<img src="./UML.jpeg" alt="Authentication Service UML Diagram" width="60%">
 
 ## Environment Variables
 
